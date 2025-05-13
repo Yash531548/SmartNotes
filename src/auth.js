@@ -4,6 +4,7 @@ import Credential from 'next-auth/providers/credentials'
 import { User } from "./models/userModel"
 import bcrypt from "bcryptjs"
 import { authConfig } from "./auth.config"
+import { connect } from "./lib/dbConnect"
 
 export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
   ...authConfig,
@@ -21,14 +22,15 @@ export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
     }),
     Credential({
       async authorize(credentials) {
-        if (!credentials === null) return null
+        if (!credentials) return null
         try {
+          await connect()
           const user = await User.findOne({
             email: credentials?.email
           })
           if (user) {
             console.log("Email matched")
-            const isMatch = bcrypt.compare(credentials?.password, user.password)
+            const isMatch = await bcrypt.compare(credentials?.password, user.password)
             if (isMatch) {
               console.log("Password Match");
               // Return user with _id
@@ -40,7 +42,8 @@ export const { handlers: { GET, POST }, signIn, signOut, auth } = NextAuth({
             throw new Error("User Doesn't Exist")
           }
         } catch (error) {
-          throw new Error("Error occur from auth.js", error)
+          console.error("Auth error:", error);
+          throw new Error(`Error occur from auth.js: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
         }
       }
     })
