@@ -15,7 +15,7 @@ const Notes = ({ Notes, currentPage, totalpage ,onUpdate }) => {
                 <div className="ml-4  ">
                     {currentPage > totalpage && currentPage > 1 ? (<>
                         <div className='flex flex-col items-center gap-10'>
-                            <h1 className='text-6xl'>You Don't have <span className='text-green-600 '>{currentPage} Pages</span> </h1>
+                            <h1 className='text-6xl'>You Don&apos;t have <span className='text-green-600 '>{currentPage} Pages</span> </h1>
                             <Link href={'/'} className='w-full'>
                                 <button className='w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded tracking-widest'>Go Home</button>
                             </Link>

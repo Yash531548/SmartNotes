@@ -55,7 +55,8 @@ const LoginForm = () => {
     className='w-full bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded tracking-widest'
     >Login</button>
     <div className="text-center mt-4">
-        <p>Don't have an Account?</p>
+        <p>Don&apos;t have an account?</p>
+
         <Link href='/register' className='text-lime-500'>Register</Link>
     </div>
     <p className='text-sm text-gray-500 mt-4'>By Signing in, I agree to Etreek Terms of use and Privacy Policy</p>
