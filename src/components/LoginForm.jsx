@@ -14,7 +14,7 @@ const LoginForm = () => {
             setError(false)
             const formData = new FormData(event.currentTarget);
             const LoginMsg = toast.loading('Login Successfull')
-            console.log(formData);
+            console.log("Formdata from LoginForm",formData);
             const response = await doCredentialLogin(formData);
             toast.dismiss(LoginMsg)
             if (!!response.error) {

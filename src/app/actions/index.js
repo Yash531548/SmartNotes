@@ -12,7 +12,7 @@ export async function doLogout(){
 }
 
 export async function doCredentialLogin(formData){
-    console.log("Formdata: " , formData)
+    console.log("Formdata(server action): " , formData)
     try {
         const response = await signIn("credentials",{
             password: formData.get("password"),
@@ -21,6 +21,7 @@ export async function doCredentialLogin(formData){
         })
         return response
     } catch (error) {
+        console.error("User Server Action ")
         throw new Error(error.message);
     }
 
