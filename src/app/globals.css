@@ -13,6 +13,31 @@ body {
   background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
   min-height: 100vh;
 }
+/* Force toolbar text and picker items white */
+.ql-toolbar.ql-snow .ql-picker,
+.ql-toolbar.ql-snow .ql-picker-label,
+.ql-toolbar.ql-snow .ql-picker-item {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Force button text white */
+.ql-toolbar.ql-snow button {
+  color: white !important;
+}
+
+/* Force SVG icons inside buttons to white */
+.ql-toolbar.ql-snow button svg {
+  stroke: red !important;
+  fill: white !important;
+}
+
+/* Optional: toolbar hover + active states */
+.ql-toolbar.ql-snow button:hover,
+.ql-toolbar.ql-snow button.ql-active {
+  background-color: #334155 !important;
+}
+
 
 .line-clamp-3 {
   display: -webkit-box;
