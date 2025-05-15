@@ -69,7 +69,7 @@ const RegistrationForm = () => {
                 <p>Already have an Account?</p>
                 <Link href='/login' className='text-lime-500'>Login</Link>
             </div>
-            <p className='text-sm text-gray-500 mt-4'>By Signing in, I agree to Etreek Terms of use and Privacy Policy</p>
+            <p className='text-sm text-gray-500 mt-4'>By Signing in, I agree to NoteNest Terms of use and Privacy Policy</p>
         </form>
   )
 }
