@@ -51,7 +51,7 @@ const AddNoteForm = () => {
                     onChange={setNoteContent}
                     theme="snow"
                     placeholder='Write you Content here ...'
-                    className='w-full  border text-black '
+                    className='w-full  border text-white '
                 />
                 {/* ✅ Hidden field to include content in FormData */}
                 <input type="hidden" name="noteContent" value={noteContent} />
