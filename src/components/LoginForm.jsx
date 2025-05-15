@@ -22,7 +22,8 @@ const LoginForm = () => {
                 setError(true)
             } else {
                 toast.success(LoginMsg);
-                router.push("/")
+                await router.push("/");       // wait for navigation
+                window.location.reload();     // then force a full reload
             }
         } catch (error) {
             throw new Error("error occur from frontend of Login", error.message)

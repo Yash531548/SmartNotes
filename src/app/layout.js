@@ -29,6 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+
+
+
         <div className="flex flex-col min-h-screen ">
           <Toaster position="top-center" toastOptions={{
             style: { fontSize: "1rem" },
@@ -42,6 +45,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </div>
+
       </body>
     </html>
   );

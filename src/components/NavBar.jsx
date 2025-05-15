@@ -1,20 +1,20 @@
 import Link from "next/link"
 import Image from "next/image";
-import { auth } from "@/auth";
 import Logoutbutton from "./Logoutbutton";
-
 import { CircleUserRound } from 'lucide-react';
+import { auth } from "@/auth";
 
 const Navbar = async () => {
   const session = await auth();
   const loggedUser = session?.user
-  console.log(loggedUser)
+  console.log("User (Nav):",loggedUser)
   const email = loggedUser?.email
-  console.log(email)
+  // console.log(email)
   return (
     <>
       <nav className="bg-[#0a0a14] px-4 py-3 flex items-center justify-between">
         <h1 className="text-2xl font-bold text-green-500"> <Link href='/'>NoteNest </Link></h1>
+        
         {loggedUser ? (<>
           <div className="flex   items-center gap-2">
             {loggedUser?.image ? (<>
