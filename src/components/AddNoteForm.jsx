@@ -36,7 +36,8 @@ const AddNoteForm = () => {
     }
     return (
 
-        <form className='w-7/12' onSubmit={handleSubmitForm}>
+        <form className='w-full' onSubmit={handleSubmitForm}>
+            <div className='w-[90%] max-w-xl mx-auto pb-4' >
             <div className='mb-4'>
                 <label htmlFor="title" className='block  text-gray-700 font-bold mb-1 text-lg'> Title</label>
                 <input type="text" name='title' placeholder='Enter Your Title here...'
@@ -57,6 +58,7 @@ const AddNoteForm = () => {
                 <input type="hidden" name="noteContent" value={noteContent} />
             </div>
             <button type='submit' className='w-full bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded tracking-widest'>Add Note</button>
+            </div>
         </form>
     )
 }
