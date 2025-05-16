@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from '@vercel/analytics/next';
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -14,8 +15,6 @@ export const metadata = {
     title: "NoteNest  – Private Note-Taking App",
     description: "Take notes privately and securely. Your data, your control.",
     siteName: "NoteNest ",
-
-
   },
   twitter: {
     card: "summary_large_image",
@@ -44,6 +43,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <Analytics />
         </div>
 
       </body>
