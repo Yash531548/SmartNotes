@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 📌 Project Title
 
-First, run the development server:
+**SmartNote** — Effortless Note-Taking with Rich Text Editing, Authentication, and Fullstack Power!
+
+
+SmartNotes is a full-stack note-taking web application that lets you securely create, edit, and manage notes with rich text formatting. Built using Next.js, MongoDB, and Tailwind CSS, it features Google Authentication and persistent user-specific notes.
+
+✨ Whether you're journaling, organizing ideas, or creating to-do lists — SmartNotes has you covered.
+
+
+
+## ✨ Features
+
+
+- 📝 Rich Text Editor with formatting (bold, italic, underline, lists, links)
+
+- 🔐 Secure Authentication with Google (via NextAuth.js)
+
+- 📁 User-specific Notes — notes are private and tied to your login
+
+- 🌐 Fully Responsive UI built with Tailwind CSS
+
+- ⚡ Next.js App Router & server actions
+
+- ☁️ MongoDB Atlas integration for persistent note storage
+
+- 🔄 Live Note Preview while editing
+
+
+
+## 🚀 Live Demo:
+
+ [NoteNest](https://smart-notes-three-omega.vercel.app/login)
+
+
+
+## 🔧 Tech Stack
+
+- 🚀 Framework: [Next.js 14 (App Router)]
+- 💅 Styling: Tailwind CSS
+- 🔐 Auth: NextAuth.js (with Google provider)
+- 📦 Database: MongoDB Atlas
+- 📝 Editor: ReactQuill (Rich Text Editor)
+- ⚡ Notifications: react-hot-toast
+
+
+## 🧠 How It Works
+- Users log in with Google
+
+- A MongoDB entry is created (if not already)
+
+- Notes are stored with ownerEmail to isolate user data
+
+- React-Quill provides a beautiful and intuitive editing experience
+
+- Full responsiveness ensures usability on mobile, tablet, and desktop
+##  Getting Started
+
+# 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Yash531548/SmartNotes.git
+  cd SmartNotes
+```
+# 2. Install dependencies
+```bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 3. Setup environment variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env` file with the following:
+```js
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+NEXTAUTH_SECRET=your-nextauth-secret
+MONGODB_URI=your-mongodb-uri
+```
+# 4. Run the app
+```bash 
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots
+### User View
+![User View](./public/UserView.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Note Popup View
+![Note view](./public/Note%20Pop%20up%20View%20.png)
+### Add Note
+![Add Note](./public/Add%20Note.png)
+### Login 
+![Login](./public/Login%20Form.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🙌 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
